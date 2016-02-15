@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Advanced Bookmarker</title>
+
+	
+	<link rel="stylesheet" href="jquery-ui.css">
+	<link rel="stylesheet" href="jquery.tagit.css">
+	<link rel="stylesheet" href="bootstrap.css">
+
+	
+	<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	<script src="tag-it.js" type="text/javascript" charset="utf-8"></script>
+	<script src="popup.js"></script>
+</head>
+<body style="width: 500px; height: 500px;">
+	<div class="container">
+		<h1>Advanced Bookmarker</h1>
+		<form role="form" id="form">
+			<div class="form-group">
+				<label for="url">URL:</label>
+				<input type="text" class="form-control" id="url">
+			</div>
+			<div class="form-group">
+				<label for="title">Title:</label>
+				<input type="text" class="form-control" id="title">
+			</div>
+			<div class="form-group">
+				<label for="description">Description:</label>
+				<textarea class="form-control" rows="5" id="description"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="tags">Tags:</label>
+				<ul id="myTags">
+				    <!-- Existing list items will be pre-added to the tags -->
+				</ul>
+			</div>			
+			<input type="hidden" id="icon">
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+</body>
+</html>

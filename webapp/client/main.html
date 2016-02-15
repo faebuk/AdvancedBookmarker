@@ -1,0 +1,22 @@
+<head>
+  <title>AdvancedBookmarkerMeteor</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  <h2>List of all Bookmarks:</h2>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  {{#each bookmarks}}
+  	<p>URL: {{url}}</p>
+  	<p>Title: {{title}}</p>
+  	<p>Tags:
+  	{{#each tags}}
+  		{{this}}
+  	{{/each}}
+  	</p>
+  	<hr>
+  {{/each}}
+</template>
