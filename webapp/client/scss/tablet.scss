@@ -1,0 +1,24 @@
+/*
+# TABLETS
+*/
+
+@import "variables";
+@import "helpers";
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  nav .nav-wrapper {
+    a.page-title {
+      font-size: 36px;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 991px) {
+
+  nav .nav-wrapper {
+    text-align: center;
+  }
+
+}

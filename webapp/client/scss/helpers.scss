@@ -1,0 +1,43 @@
+/*
+# HELPER CLASSES
+### HIDDEN
+### FULLWIDTH
+### TEXTCENTER
+### BOLD
+*/
+
+@mixin hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+@mixin fullwidth {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@mixin textcenter {
+  text-align: center;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin pager-item($color:"") {
+  border-radius: 2px;
+  color: unquote($color);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 30px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}

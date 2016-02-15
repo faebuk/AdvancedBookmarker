@@ -1,0 +1,76 @@
+/*
+# NAVIGATION
+*/
+
+@import "variables";
+@import "helpers";
+
+nav.top-nav {
+  height: 122px;
+  a.page-title {
+    line-height: 122px;
+  }
+}
+
+a.button-collapse.top-nav {
+  float: none;
+  font-size: 32px;
+  left: 7.5%;
+  margin-left: 1.5rem;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+
+  line-height: 122px;
+
+}
+
+ul.side-nav {
+  li {
+    i.material-icons {
+      font-size: 2rem;
+      line-height: $nav-li-height;
+    }
+    &.logo {
+      border-bottom: 1px solid $gray-light;
+      height: $nav-header-height;
+      line-height: $nav-header-height;
+      position: relative;
+      text-align: center;
+      #logo-container {
+        height: 100%;
+        img {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+      }
+    }
+    &.login-links {
+      border-bottom: 1px solid $gray-light;
+      height: $nav-li-height;
+      a {
+        padding: 0;
+        width: 50%;
+        &:first-child {
+          border-right: 1px solid $gray-light;
+        }
+        i.left {
+          margin-left: 15px;
+        }
+      }
+    }
+    &.username,
+    .collapsible-body {
+      border-bottom: 1px solid $gray-light;
+    }
+    .collapsible {
+      > li {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

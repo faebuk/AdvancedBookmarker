@@ -1,0 +1,52 @@
+/*
+# OVERRIDE STYLES BY MATERIALIZECSS
+### BORDER
+### BOX-SHADOW
+### MARGIN
+### PADDING
+### SIDENAV
+*/
+
+@import "variables";
+@import "helpers";
+
+/* BORDER */
+.collapsible {
+  border: none;
+}
+
+/* BOX-SHADOW */
+nav.top-nav,
+.collapsible {
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+/* MARGIN */
+ul.side-nav .collapsible-header,
+ul.side-nav .collapsible-body li a,
+ul.help {
+  margin: 0;
+}
+.no-mb {
+  margin-bottom: 0;
+}
+
+/* PADDING */
+span.badge {
+  padding: 0;
+}
+.collapsible-header {
+  padding-right: 0;
+}
+ul.side-nav {
+  .full a,
+  .fixed a {
+    padding: 0 25px;
+  }
+}
+
+/* SIDENAV */
+// .drag-target {
+// }

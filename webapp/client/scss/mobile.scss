@@ -1,0 +1,69 @@
+/*
+# MOBILE
+*/
+
+@import "variables";
+@import "helpers";
+
+@media only screen and (max-width: 480px) {
+
+  .modal {
+    max-width: 90%;
+    width: 90%;
+  }
+  ul.tabs {
+    li.tab {
+      text-align: center;
+      a {
+        i.left {
+          float: none !important;
+        }
+      }
+    }
+  }
+  .link-text,
+  .collapsible-header span.badge {
+    //@include hidden;
+  }
+  .icon-header {
+    @include textcenter;
+    i.header-icon {
+      @include fullwidth;
+      @include textcenter;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  nav .nav-wrapper {
+    a.page-title {
+      font-size: 26px;
+    }
+  }
+
+  table {
+    // Styles for the pinned word table
+    // See onRendered @/templates/exposed/practice/practice-table.js
+    &.practice-words {
+      td.word {
+        padding: 5px;
+        width: 33.33333%;
+      }
+      &.pinned {
+        background-color: $white;
+        border-bottom: 1px solid $gray-light;
+        border-collapse: separate;
+        left: 0;
+        z-index: 5;
+      }
+    }
+  }
+  form {
+    &.sentences {
+      //margin-top: 76px;
+    }
+  }
+
+}

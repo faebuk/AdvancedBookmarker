@@ -1,0 +1,306 @@
+/*
+# MAIN
+*/
+
+@import "variables";
+@import "helpers";
+
+html, body {
+  height: 100%;
+}
+
+// Sticky footer
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+footer {
+  flex: none;
+}
+// end of Sticky footer
+
+.link:hover,
+.word:hover {
+  cursor: pointer;
+}
+
+.icon-block {
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+// Only temporary
+.chip {
+  background-color: #E4E4E4;
+  border-radius: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 12px;
+}
+.chip i.material-icons {
+  cursor: pointer;
+  float: right;
+  font-size: 16px;
+  line-height: 32px;
+  padding-left: 8px;
+}
+// end chip
+
+.tab-container {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+ul.tabs {
+  li.tab {
+    text-align: left;
+    &.disabled {
+      opacity: 0.5;
+    }
+    a {
+      i.left {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+span.badge-text {
+  border: 1px solid $white;
+  border-radius: 4px;
+  margin-right: 10px;
+  padding: 4px 6px;
+}
+
+.item-context-col.col {
+  padding: 0;
+  text-align: center;
+}
+.btn {
+  &.item-context {
+    background-color: $trans;
+    border: 0;
+    box-shadow: none;
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+.item-link {
+  padding: 0 1rem;
+}
+
+.item-row {
+  margin-bottom: 0;
+  &:hover {
+    background-color: $gray-lightest;
+    cursor: pointer;
+  }
+  .name {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+}
+
+.card {
+  &.card-help {
+    padding: 15px;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.staggered {
+  li {
+    opacity: 0;
+  }
+}
+
+// Pager
+.pagination {
+  display: none;
+  label {
+    &.first-button,
+    &.last-button,
+    &.minus-button,
+    &.plus-button,
+    &.page-button {
+      @include pager-item($gray);
+    }
+    &.page-selected {
+      background-color: $basecolor;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
+/*
+ * #PRACTICE
+ */
+.sentences {
+  list-style: decimal;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  .collection-item {
+    border: 0;
+    padding: 10px;
+    input[name="word"] {
+      height: 1.5rem;
+      margin: 0;
+      width: auto;
+    }
+  }
+}
+
+/*
+ * #DASHBOARD
+ */
+.collection {
+  .collection-item {
+    &.last {
+      background-color: $gray-lightest;
+    }
+    .sentence {
+      @include ellipsis;
+    }
+  }
+}
+
+th {
+  &[data-field="operations"] {
+    max-width: 100px;
+    width: 100px;
+  }
+}
+
+table {
+  &.compact {
+    tbody {
+      td {
+        padding-bottom: 5px;
+        padding-top: 5px;
+      }
+    }
+  }
+  tr {
+    &.exam-result {
+      span {
+        height: 25px;
+        margin: 0 auto;
+        width: 25px;
+        [type="checkbox"] + label {
+          top: 5px;
+        }
+      }
+    }
+    &.select-all {
+      border-top: 1px solid $gray-light;
+      td {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        a {
+          display: inline-block;
+          margin-left: -10px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  th {
+    &[data-field="print"] {
+      width: 50px;
+    }
+  }
+  td {
+    &[data-field="print"] {
+      span {
+        display: inline-block;
+      }
+      &.select-all {
+        span, label {
+          width: 100%;
+        }
+        span {
+          margin-left: 8px;
+        }
+        label {
+          padding-left: 42px;
+        }
+      }
+    }
+  }
+}
+
+/*
+ * #CREATE EXAM
+ */
+.units {
+  .collection {
+    .collection-item {
+      padding: 10px 0 0 0;
+      .unit {
+        margin: 0;
+        [type="checkbox"] + label {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.exercises-row,
+.extrawords-row {
+  .collection-header {
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+    padding: 20px;
+  }
+  .collection {
+    margin-top: 0;
+  }
+}
+.exercises,
+.extrawords-container {
+  .collection-item {
+    &.exercise,
+    &.add-exercise {
+      padding-left: 20px;
+    }
+  }
+  .collection-item {
+    .row {
+      margin-bottom: 0;
+      padding: 0;
+    }
+  }
+}
+.exercises {
+  .exercise {
+    opacity: 0;
+  }
+}
+.extrawords-container.collection {
+  .collection-item {
+    padding: 10px 10px 5px 10px;
+  }
+  .extrawords {
+    .extraword {
+      display: inline-block;
+      opacity: 0;
+    }
+    .chip {
+      margin-bottom: 4px;
+    }
+  }
+}

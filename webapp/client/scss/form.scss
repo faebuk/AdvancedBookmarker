@@ -1,0 +1,40 @@
+/*
+# FORM
+*/
+
+@import "variables";
+@import "helpers";
+
+.input-field,
+.form-footer {
+  margin-top: 10px;
+}
+
+input:disabled {
+  ~ .prefix,
+  ~ .prefix.active {
+    color: $gray-lighter;
+  }
+}
+a.disabled {
+  i {
+    color: $gray-lighter;
+  }
+}
+
+.row {
+  input {
+    &.col {
+      padding-left: 0;
+    }
+  }
+}
+
+/*
+# AUTOCOMPLETE
+*/
+.-autocomplete-item {
+  &.selected {
+    background-color: $basecolor;
+  }
+}

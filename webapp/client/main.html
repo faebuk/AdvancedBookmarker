@@ -1,22 +1,6 @@
 <head>
-  <title>AdvancedBookmarkerMeteor</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Advanced Bookmarker</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-
-<body>
-  <h1>Welcome to Meteor!</h1>
-  <h2>List of all Bookmarks:</h2>
-  {{> hello}}
-</body>
-
-<template name="hello">
-  {{#each bookmarks}}
-  	<p>URL: {{url}}</p>
-  	<p>Title: {{title}}</p>
-  	<p>Tags:
-  	{{#each tags}}
-  		{{this}}
-  	{{/each}}
-  	</p>
-  	<hr>
-  {{/each}}
-</template>

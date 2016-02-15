@@ -1,0 +1,69 @@
+<!-- Template for features page -->
+<template name="home">
+  <div class="row">
+    <p><b>Filter</b></p>
+    <div class="row">
+      {{#each tagsAggregated}}
+        <div class="chip">            
+          {{this}}
+          <i class="material-icons">close</i>
+        </div>
+      {{/each}}
+    </div>
+    <div class="row">
+      <form class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+          <input id="addTag" type="text" class="validate">
+          <label for="addTag">Add filter</label>
+        </div>
+        <div class="input-field col s4">
+          <a class="waves-effect waves-light btn">Remve all filters</a>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <ul class="collection">
+      {{#each bookmarks}}
+      <li class="collection-item avatar" style="min-height: 100px;">
+        {{#if icon}}
+        <img src="{{icon}}" alt="" class="circle">
+        {{else}}
+        <img src="img/default_icon.png" alt="" class="circle">
+        {{/if}}
+        <span class="title">{{title}}</span>
+        <div>
+          <p><b>Website</b></p> 
+          <a href="{{getDomain url}}">{{getDomain url}}</a>           
+        </div>
+        <div>
+          <p><b>Description</b></p>
+          {{#if description}}
+          <p>{{description}}</p>
+          {{else}}
+          <p>-</p>
+          {{/if}}
+        </div>
+        <div>
+          <p><b>Tags</b></p>
+          {{#each this.tags}}
+          <div class="chip">            
+            {{this}}
+          </div>
+          {{/each}}
+        </div>
+        <a href="{{url}}" target="_blank" class="secondary-content"><i class="material-icons">open_in_new</i></a>
+      </li>
+      {{else}}
+      <li class="collection-item avatar">
+        no items ...
+      </li>
+      {{/each}}
+    </ul>
+
+  </div>
+
+</template>

@@ -1,0 +1,29 @@
+<!-- Template for the navigation -->
+<template name="navigation">
+
+  <header>
+
+    <nav class="top-nav">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a class="page-title">{{currentPage}}</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full"><i class="mdi-navigation-menu"></i></a>
+    </div>
+
+    <ul id="nav-mobile" class="side-nav fixed">
+      <li class="logo no-padding">
+        <a id="logo-container" href="/" class="brand-logo"><img src="/img/logo.png" width="100"></a>
+      </li>
+      <li class="no-padding username">
+        <a href="/"><i class="material-icons left">account_box</i>Home</a>
+      </li>
+    </ul>
+
+  </header>
+
+</template>

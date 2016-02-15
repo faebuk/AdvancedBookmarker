@@ -1,0 +1,30 @@
+/*
+# DESKTOP
+*/
+
+@import "variables";
+@import "helpers";
+
+@media screen and (min-width: 992px) {
+
+  main,
+  footer {
+    padding-left: 240px;
+  }
+
+  #sidenav-overlay {
+    @include hidden;
+  }
+
+  ul.side-nav {
+    left: 0 !important;
+    overflow-x: scroll;
+  }
+
+  nav .nav-wrapper {
+    a.page-title {
+      font-size: 48px;
+    }
+  }
+
+}
